@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -12,4 +12,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  @Output() subpageSelected = new EventEmitter<string>();
+  onClick(subpage: string) {
+    this.subpageSelected.emit(subpage);
+  }
 }

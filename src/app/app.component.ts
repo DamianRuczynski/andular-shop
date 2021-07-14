@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-shop';
+
+  subpageSelected = 'shop';
+
+  onNavigate(subpage: string) {
+    this.subpageSelected = subpage;
+  }
+
+
 }
